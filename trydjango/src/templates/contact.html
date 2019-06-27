@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>contact</h1>
+	{{ request.user.is_authenticated }}
+	<p>this is another template</p>
+	<p>
+		{{ my_num }}, {{ my_text}}
+	</p>
+	<ul>
+		{% for my_sub_item in my_list %}
+			{% if forloop.counter != 2 %}
+			<li>{{ my_sub_item|capfirst }}</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+
+
+{% endblock %}
